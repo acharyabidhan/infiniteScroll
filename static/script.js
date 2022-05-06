@@ -29,10 +29,10 @@ $(window).scroll(function () {
     console.log(document.documentElement.scrollTop || document.body.scrollTop)
     if((document.documentElement.scrollTop || document.body.scrollTop) > 800){
         document.getElementById("arrow").style.display = "block";
-    }else if((document.documentElement.scrollTop || document.body.scrollTop) < 200){
+    }else if((document.documentElement.scrollTop || document.body.scrollTop) < 400){
         document.getElementById("arrow").style.display = "none";
     }
-    if ($(window).scrollTop() + $(window).height() > $(document).height() - 400){
+    if ($(window).scrollTop() + $(window).height() > $(document).height() - 800){
         if(count > 8){
             count = 0
             loadImages()
