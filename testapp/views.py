@@ -12,7 +12,7 @@ count = 0
 def getIndex():
     global count
     count = count + 1
-    if count == 15:
+    if count == 29:
         count = 0
     return count
 
