@@ -32,7 +32,7 @@ $(window).scroll(function () {
     }else if((document.documentElement.scrollTop || document.body.scrollTop) < 400){
         document.getElementById("arrow").style.display = "none";
     }
-    if ($(window).scrollTop() + $(window).height() > $(document).height() - 800){
+    if ($(window).scrollTop() + $(window).height() > $(document).height() - 1000){
         if(count > 8){
             count = 0
             loadImages()
