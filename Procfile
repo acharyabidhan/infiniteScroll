@@ -1,1 +1,1 @@
-web: gunicorn frendbook.wsgi --log-file -
+web: gunicorn testproject.wsgi --log-file -
