@@ -8,7 +8,7 @@ function scrollPage(){
 
 var count = 0;
 function loadImages(){
-    if(count < 10){
+    if(count < 15){
         $.ajax({
             url: "load",
             data: {
@@ -18,7 +18,7 @@ function loadImages(){
                 var ptag = document.createElement("p")
                 ptag.innerHTML = response.image
                 document.body.appendChild(ptag)
-                count += 1
+                count = count + 1
                 loadImages()
             }
         })
@@ -33,7 +33,7 @@ $(window).scroll(function () {
         document.getElementById("arrow").style.display = "none";
     }
     if ($(window).scrollTop() + $(window).height() > $(document).height() - 1000){
-        if(count > 8){
+        if(count > 13){
             count = 0
             loadImages()
         }

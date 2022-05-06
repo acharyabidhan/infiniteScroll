@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-fxoocb-vk&gcg+2*_u@n987ik0n%x2$_121))k9d4t@)9p55*v'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['localhost', 'infinite-image-scroll.herokuapp.com']
 
