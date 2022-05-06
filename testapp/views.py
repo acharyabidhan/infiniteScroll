@@ -6,9 +6,9 @@ from pathlib import Path
 baseDir = os.path.join(Path(Path(__file__).resolve().parent.parent))
 #reading image data
 def getImage():
-    imagesList = os.listdir(f"{baseDir}\\images")
+    imagesList = os.listdir(f"{baseDir}/images")
     oneImage = random.choice(imagesList)
-    imageData = open(f"{baseDir}\\images\\{oneImage}", "rb")
+    imageData = open(f"{baseDir}/images/{oneImage}", "rb")
     imageData = imageData.read()
     imageData = base64.b64encode(imageData)
     imageData = imageData.decode("UTF-8")
