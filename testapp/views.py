@@ -17,7 +17,7 @@ def getImage():
 def load(request):
     image = {
         "image":f"""
-            <img src="data:image;charset=utf-8;base64,{getImage()}" alt="image" height=50% width=50%>
+            <img src="data:image;charset=utf-8;base64,{getImage()}" alt="image" height=90% width=90%>
         """
     }
     return JsonResponse(image, safe=False)
