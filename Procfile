@@ -1,0 +1,1 @@
+web: gunicorn frendbook.wsgi --log-file -
