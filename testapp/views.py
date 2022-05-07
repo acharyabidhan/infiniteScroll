@@ -16,15 +16,16 @@ def getIndex():
         count = 0
     return count
 
+binImageList = []
+imagesList = os.listdir(f"{baseDir}/images")
+for image in imagesList:
+    with open(f"{baseDir}/images/{image}", "rb") as img:
+        imageData = img.read()
+        imageData = base64.b64encode(imageData)
+        imageData = imageData.decode("UTF-8")
+    binImageList.append(imageData)
+    
 def getImage():
-    binImageList = []
-    imagesList = os.listdir(f"{baseDir}/images")
-    for image in imagesList:
-        with open(f"{baseDir}/images/{image}", "rb") as img:
-            imageData = img.read()
-            imageData = base64.b64encode(imageData)
-            imageData = imageData.decode("UTF-8")
-        binImageList.append(imageData)
     imageData = binImageList[getIndex()]
     return imageData
 
